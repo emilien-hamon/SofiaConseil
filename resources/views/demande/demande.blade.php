@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.app')
 @section('content')
 <div class="container mt-4">
     <div class="row justify-content-center">
@@ -9,7 +9,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Description</th>
+                        <th scope="col">Titre</th>
                         <th scope="col">Compétences</th>
                         <th scope="col">Action</th>
                         <!-- Ajoutez plus de colonnes au besoin -->

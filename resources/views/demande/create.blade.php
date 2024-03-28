@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.app')
 
 @section('content')
 <div class="container mt-4">
@@ -23,7 +23,7 @@
                             <label for="competence">Compétences</label>
                             <input type="text" name="competence" id="competence" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Créer Demande</button>
+                        <button type="submit" class="btn btn-primary btn-block mt-1 w-100">Créer Demande</button>
                         <a href="{{ route('demande.index') }}" class="btn btn-secondary mt-1 w-100">Retour à la liste</a>
                     </form>
                 </div>

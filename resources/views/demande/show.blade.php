@@ -10,9 +10,12 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">ID: {{ $demande->id }}</h5>
+                    <p class="card-text"><strong>Titre:</strong> {{ $demande->titre }}</p>
                     <p class="card-text"><strong>Description:</strong> {{ $demande->description }}</p>
                     <p class="card-text"><strong>Compétences:</strong> {{ $demande->competence }}</p>
-                    <!-- Ajoutez plus d'informations de la demande au besoin -->
+                    <p class="card-text"><strong>Statut:</strong> {{ $demande->statut }}</p>
+                    <p class="card-text"><strong>Date de demande:</strong> {{ $demande->date_demande }}</p>
+                    <!-- Vous pouvez ajouter d'autres champs au besoin -->
                 </div>
                 <div class="card-footer">
                     <a href="{{ route('demande.index') }}" class="btn btn-secondary">Retour à la liste</a>
