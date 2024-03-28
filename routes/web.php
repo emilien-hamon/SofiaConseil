@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
     // Déplacez la route de la liste des demandes à la racine du site
+
+
     Route::get('/', [DemandeController::class, 'index'])->name('demande.index');
     Route::get('/dashboard', function () {
         return view('dashboard');
