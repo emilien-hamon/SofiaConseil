@@ -1,4 +1,4 @@
-@extends('layouts.header')
+@extends('layouts.app')
 
 @section('content')
 <div class="container mt-4">
@@ -18,7 +18,7 @@
                     <!-- Vous pouvez ajouter d'autres champs au besoin -->
                 </div>
                 <div class="card-footer">
-                    <a href="{{ route('demande.index') }}" class="btn btn-secondary">Retour à la liste</a>
+                    <a href="{{ route('demande.index') }}" class="btn btn-primary btn-block mt-1 w-100">Retour à la liste</a>
                 </div>
             </div>
         </div>

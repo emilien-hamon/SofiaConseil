@@ -3,7 +3,7 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <h1 class="text-center mb-4">Liste des demandes</h1>
+            <h1 class="text-center mb-4">Liste de vos demandes</h1>
 
             <table class="table table-bordered table-striped">
                 <thead class="thead-dark">
