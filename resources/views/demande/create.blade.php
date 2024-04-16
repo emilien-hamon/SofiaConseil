@@ -4,9 +4,9 @@
 <div class="container mt-4">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">
-                    <h1 class="text-center mb-4">Créer une nouvelle demande</h1>
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h1 class="text-center mb-0">Créer une nouvelle demande</h1>
                 </div>
                 <div class="card-body">
                     <form action="{{ route('demande.store') }}" method="post">

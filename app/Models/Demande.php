@@ -6,7 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Demande extends Model
 {
-    // ...
+    public function statut()
+{
+    return $this->belongsTo(Statut::class, 'id_statuts');
+}
+
 
     public function competences()
     {
