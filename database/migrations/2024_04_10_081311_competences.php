@@ -25,9 +25,6 @@ return new class extends Migration
             ['nom' => 'JS', 'description' => 'JS'],
             ['nom' => 'C#', 'description' => 'C#'],
             ['nom' => 'Kotlin', 'description' => 'Kotlin'],
-            ['nom' => 'Squat', 'description' => '3 plaques'],
-            ['nom' => 'Bench', 'description' => '2 plaques'],
-            ['nom' => 'Deadlift', 'description' => '3,5 plaques mais en vrai bientôt 4 je le sens BIEEEEEN'],
         ]);
 
     }

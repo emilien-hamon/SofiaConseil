@@ -15,16 +15,15 @@
                         <table class="table table-bordered table-striped">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col" class="col-1">ID</th>
                                     <th scope="col" class="col-4">Titre</th>
                                     <th scope="col" class="col-4">Compétences</th>
-                                    <th scope="col" class="col-3">Action</th>
+                                    <th scope="col" class="col-3">Statut</th>
+                                    <th scope="col" class="col-1">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($demandes_finalisees as $demande)
                                     <tr>
-                                        <td>{{ $demande->id }}</td>
                                         <td>{{ $demande->titre }}</td>
                                         <td>
                                             @foreach ($demande->competences as $competence)
@@ -34,6 +33,7 @@
                                                 @endif
                                             @endforeach
                                         </td>
+                                        <td>{{ $demande->statut ? $demande->statut->statut : 'Aucun statut trouvé' }}</td>
                                         <td>
                                             <a href="{{ route('demande.show', $demande->id) }}" class="btn btn-info">Infos</a>
                                         </td>
@@ -54,16 +54,15 @@
                         <table class="table table-bordered table-striped">
                             <thead class="thead-dark">
                                 <tr>
-                                    <th scope="col" class="col-1">ID</th>
                                     <th scope="col" class="col-4">Titre</th>
                                     <th scope="col" class="col-4">Compétences</th>
-                                    <th scope="col" class="col-3">Action</th>
+                                    <th scope="col" class="col-3">Statut</th>
+                                    <th scope="col" class="col-1">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($demandes_brouillon as $demande)
                                     <tr>
-                                        <td>{{ $demande->id }}</td>
                                         <td>{{ $demande->titre }}</td>
                                         <td>
                                             @foreach ($demande->competences as $competence)
@@ -73,6 +72,7 @@
                                                 @endif
                                             @endforeach
                                         </td>
+                                        <td>{{ $demande->statut ? $demande->statut->statut : 'Aucun statut trouvé' }}</td>
                                         <td>
                                             <a href="{{ route('demande.show', $demande->id) }}" class="btn btn-info">Infos</a>
                                         </td>
