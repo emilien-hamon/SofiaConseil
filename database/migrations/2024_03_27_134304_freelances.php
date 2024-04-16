@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('freelance', function (Blueprint $table) {
+        Schema::create('freelances', function (Blueprint $table) {
             $table->id();
-            $table->string('competence');
+            $table->string('nom');
             $table->string('experience');
             $table->string('description');
             $table->rememberToken();

@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('id_users'); // Utilisation de unsignedBigInteger pour référencer la clé primaire de la table users
             $table->foreign('id_users')->references('id')->on('users'); // Définition de la contrainte de clé étrangère
+            $table->unsignedBigInteger('id_statuts'); // Utilisation de unsignedBigInteger pour référencer la clé primaire de la table users
+            $table->foreign('id_statuts')->references('id')->on('statuts'); // Définition de la contrainte de clé étrangère
             $table->date('date_demande');
-            $table->string('statut');
             $table->string('titre');
             $table->string('description');
-            $table->string('competence');
             $table->rememberToken();
             $table->timestamps();
         });

@@ -13,18 +13,46 @@
                         @csrf
                         <div class="form-group">
                             <label for="titre">Titre</label>
-                            <input name="titre" id="titre" class="form-control" rows="5" required></input>
+                            <input maxlength="25" name="titre" id="titre" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea name="description" id="description" class="form-control" rows="5" required></textarea>
+                            <textarea maxlength="255" name="description" id="description" class="form-control" rows="5" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="competence">Compétences</label>
-                            <input type="text" name="competence" id="competence" class="form-control" required>
+                            <p>Cocher les compétences nécessaires au projet :</p>
+                            <div class="row">
+                                @foreach ($competences->chunk(ceil($competences->count() / 4)) as $chunk)
+                                    <div class="col-md-3">
+                                        <div class="d-flex flex-column align-items-center">
+                                            @foreach ($chunk as $competence)
+                                                <div class="custom-control custom-checkbox mb-2">
+                                                    <input type="checkbox" id="competence_{{ $competence->id }}" name="competences[]" class="custom-control-input" value="{{ $competence->id }}">
+                                                    <label class="custom-control-label" for="competence_{{ $competence->id }}">{{ $competence->nom }}</label>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block mt-1 w-100">Créer Demande</button>
-                        <a href="{{ route('demande.index') }}" class="btn btn-secondary mt-1 w-100">Retour à la liste</a>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="en_brouillons" name="en_brouillons">
+                                <label class="form-check-label" for="en_brouillons">
+                                    Enregistrer en brouillons
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary btn-block w-100">Créer Demande</button>
+                            </div>
+                            <div class="col-md-6">
+                                <a href="{{ route('demande.index') }}" class="btn btn-secondary btn-block w-100">Retour à la liste</a>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
